@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitchel .D Poblete S. | Analista Programador</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <div class="logo-link" onclick="scrollToTop()">MITCHEL .D POBLETE S.</div>
+        <div class="nav-links">
+            <a onclick="scrollToSection('certified')">Certificaciones</a>
+            <a onclick="scrollToSection('experience')">Experiencia</a>
+            <a onclick="scrollToSection('my-projects')">Mis Proyectos</a>
+            <a onclick="scrollToSection('contact-section')">Contacto</a>
+        </div>
+        <div>CURiCO / CL</div>
+    </nav>
+
+    <div class="scroll-indicator" id="scroll-dir">INICIO</div>
+    
+    <svg id="svg-filters">
+        <defs>
+            <filter id="gooey">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 25 -12" result="goo" />
+                <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="interaction-layer">
+        <div class="blob-particle" id="c1" style="width: 80px; height: 80px;"></div>
+        <div class="blob-particle" id="c2" style="width: 50px; height: 50px;"></div>
+    </div>
+
+    <div class="page-wrapper" id="top">
+        <div class="section-container" id="horizontal-1">
+            <section data-label="INICIO" data-physics="mercury" data-morph="40% 60% 70% 30% / 40% 40% 60% 60%">
+                <h1 class="title-giant">MITCH<br>EL .D</h1>
+                <div class="profile-wrapper">
+                    <div class="profile-blob">
+                        <img src="https://avatars.githubusercontent.com/u/105990185?v=4" alt="Mitchel Poblete">
+                    </div>
+                </div>
+                <div class="project-meta">
+                    TRANSFORMANDO DATOS EN DECISIONES ESTRATÉGICAS
+                    <br><span style="opacity: 0.7; font-size: 0.9em;">Data Science · Machine Learning · Business Intelligence</span>
+                </div>
+            </section>
+            
+             <section data-label="SOBRE MÍ" data-physics="mercury" data-morph="70% 30% 30% 70% / 60% 40% 60% 40%">
+                <h1 class="title-giant">POBLE<br>TE S.</h1>
+                <div class="project-meta">
+                    DISEÑANDO ARQUITECTURAS DIGITALES ROBUSTAS
+                    <br><span style="opacity: 0.7; font-size: 0.9em;">Sistemas Escalables · APIs · Cloud Solutions</span>
+                </div>
+            </section>
+
+            <section data-label="HABILIDADES" data-physics="mercury" data-morph="30% 70% 70% 30% / 30% 30% 70% 70%">
+                <h1 class="title-giant" style="color: var(--accent);">
+                    <span id="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                </h1>
+                <div class="project-meta">
+                    ESPECIALIZADO EN DESARROLLO DE ALTO RENDIMIENTO
+                    <br><span style="opacity: 0.7; font-size: 0.9em;">Python · PHP · Optimización · Clean Code</span>
+                </div>
+            </section>
+        </div>
+
+        <div class="vertical-container">
+            <div id="certified" class="vertical-section" data-label="CERTIFICACIONES" data-physics="rain" data-morph="50% 50% 50% 50% / 50% 50% 50% 50%">
+                <div style="width: 100%">
+                    <h1 class="title-giant">CERTIFICADOS</h1>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <h3>Oracle Cloud Infrastructure OCI</h3>
+                            <p>Certified Foundations Associate - 2025</p>
+                            <ul class="aptitudes-list">
+                                <li>Cloud Architecture</li>
+                                <li>Infrastructure Management</li>
+                                <li>Cloud Security</li>
+                                <li>Governance & Administration</li>
+                            </ul>
+                            <a href="https://catalog-education.oracle.com/ords/certview/sharebadge?id=74613049B781728270850FD78C4DD69F016B78CF476BEFDFFA8727EF5AED82A6" 
+                                target="_blank" 
+                                rel="noopener noreferrer nofollow"
+                                class="cert-btn">VER CERTIFICADO →</a>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <h3>Cert. Data Science</h3>
+                            <p>Alura Latam & ONE - 2025</p>
+                            <ul class="aptitudes-list">
+                                <li>Python (Pandas/Numpy)</li>
+                                <li>Machine Learning</li>
+                                <li>Data Visualization</li>
+                                <li>Statistical Analysis</li>
+                            </ul>
+                            <a href="https://app.aluracursos.com/program/certificate/83825645-397f-4ca6-a00c-2f20a1590dca?lang" 
+                               target="_blank" 
+                               class="cert-btn">VER CERTIFICADO →</a>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <h3>Analista Programador</h3>
+                            <p>INACAP - 2022</p>
+                            <ul class="aptitudes-list">
+                                <li>Software Architecture</li>
+                                <li>OOP</li>
+                                <li>SQL Server</li>
+                                <li>Agile Methodologies</li>
+                            </ul>
+                            <a href="https://www.linkedin.com/in/mitchel-poblete/overlay/1635511736982/single-media-viewer/?profileId=ACoAAD15Y0UBMcIuM91woSQ5Y-sE9mwsGAzU1BE" 
+                               target="_blank" 
+                               class="cert-btn">VER CERTIFICADO →</a>
+                        </div>
+                        
+                        <div class="tech-item">
+                            <h3>JavaScript Moderno</h3>
+                            <p>Desarrollo Ágil de Software - 2023</p>
+                            <ul class="aptitudes-list">
+                                <li>JavaScript</li>
+                                <li>Fetch</li>
+                                <li>API</li>
+                                <li>IndexedDB</li>
+                                <li>Tailwind CSS</li>
+                                <li>CSS</li>
+                            </ul>
+                            <a href="https://www.udemy.com/certificate/UC-46271be4-f60a-4df9-8388-3c53e8fa9138/" 
+                               target="_blank" 
+                               class="cert-btn">VER CERTIFICADO →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="experience" class="vertical-section" data-label="EXPERIENCIA" data-physics="rain" data-morph="20% 80% 20% 80% / 80% 20% 80% 20%">
+                <div style="width: 100%">
+                    <h1 class="title-giant" style="color: var(--accent); margin-bottom: 4rem;">EXPERIENCIA<br></h1>
+                    
+                    <div class="experience-card">
+                        <h3>No Country - Simulacion Laboral 2025</h3>
+                        <span>CIENTIFICO DE DATOS</span>
+                        <p>SentimentAPI — Análisis de Sentimientos de Feedbacks</p>
+                        <ul class="experience-details">
+                            <li>Integrante de equipo multidisciplinario desarrollando sistema de análisis de sentimientos.</li>
+                            <li>Responsable del pipeline completo de ML para español y portugués.</li>
+                            <li>Implementación de técnicas de NLP especializadas y normalización de datos.</li>
+                            <li>Optimización de SGDClassifier alcanzando 88.5% accuracy.</li>
+                            <li>Colaboración estrecha con equipo Backend para definición de APIs e integración del modelo.</li>
+                            <li>Evaluación comparativa de 7 algoritmos de ML (Regresión Logística, SVM, Naive Bayes, SGD)</li>
+                            <li>Serialización del modelo con Joblib para consumo via API REST.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h3>Brouter SpA</h3>
+                        <span>DESARROLLADOR WEB PHP-Laravel 2022 — PRÁCTICA PROFESIONAL</span>
+                        <p>Colaboración integral en el ciclo de vida del software para plataformas corporativas.</p>
+                        <ul class="experience-details">
+                            <li>Implementación de soluciones en Marketplace & Ecommerce.</li>
+                            <li>Desarrollo de soluciones empresariales.</li>
+                            <li>Encargado de Diseñar y Optimizar Sitios Web utilizando HTML y CSS.</li>
+                            <li>Levantamiento y análisis de requerimientos.</li>
+                            <li>QA Funcionales y Técnicos.</li>
+                            <li>Canalización de actividades de equipo.</li>
+                        </ul>
+                    </div>
+
+                    <div class="experience-card">
+                        <h3>Freelance Developer</h3>
+                        <span>DESARROLLADOR WEB INDEPENDIENTE 2022 — ACTUALIDAD</span>
+                        <p>Diseño y ejecución de ecosistemas digitales de alto rendimiento.</p>
+                        <ul class="experience-details">
+                            <li>Desarrollo de sitios web responsivos usando PHP, Laravel, HTML5, CSS3 y JavaScript. </li>
+                            <li>Trabajo directo con clientes para levantar requerimientos y diseñar soluciones personalizadas.</li>
+                            <li>Optimización de rendimiento web (Core Web Vitals) y mejoras SEO.</li>
+                            <li>Entrega de 5 proyectos a PyMEs en diversos sectores.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-container" id="horizontal-2">
+            <section class="dark-project-section" data-label="AGRADECIMIENTOS" data-physics="rain" data-morph="10% 90%  10% 90% / 90% 10% 90% 10%">
+                <h1 class="title-giant">GRACIAS<br>POR PASARTE <span class="pulsing-heart">❤️</span></h1>
+                <div class="project-meta">
+                    Este portafolio fue desarrollado con 
+                    <span style="color: var(--accent);">HTML5, CSS3, JavaScript ES6+, GSAP</span>
+                    <br>Desplegado en Cloudflare Pages · EmailJS · Cloudflare Turnstile
+                    <br><br>
+                    <span style="opacity: 1.0;">© 2025 · Desarrollado por Mitchel D. Poblete S.</span>
+                </div>
+            </section>
+            
+            <section id="contact-section" data-label="CONTACTO" data-physics="rain" data-morph="50% 50% 20% 80% / 80% 20% 50% 50%">
+                <div style="width: 100%">
+                    <h1 class="title-giant">CONTACTO</h1>
+                    
+                    <!-- Añade este div para mensajes de feedback -->
+                    <div id="form-feedback"></div>
+                    
+                    <div class="contact-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: start;">
+                        
+                        <form id="portfolio-form" style="display: flex; flex-direction: column;">
+                            <input type="text" id="form-name" placeholder="NOMBRE COMPLETO" class="form-field" required>
+                            <input type="email" id="form-email" placeholder="EMAIL" class="form-field" required>
+                            <input type="text" id="form-subject" placeholder="ASUNTO" class="form-field" required>
+                            <textarea id="form-message" placeholder="MENSAJE / PROPUESTA" class="form-field" required></textarea>
+                            
+                            <!-- Añade un ID al contenedor de Turnstile -->
+                            <div id="turnstile-widget" 
+                                class="cf-turnstile" 
+                                data-sitekey="0x4AAAAAACYK9SsiX_mLaH_b"
+                                data-callback="onTurnstileSuccess"
+                                data-error-callback="onTurnstileError"
+                                style="margin: 20px 0;"></div>
+                            
+                            <button type="submit" id="submit-btn" style="background:var(--dark); color:white; border:none; padding:15px 30px; font-weight:900; cursor:pointer; margin-top:20px; align-self: flex-start; transition: transform 0.2s;" 
+                                    onmouseover="this.style.transform='scale(1.05)'" 
+                                    onmouseout="this.style.transform='scale(1)'">
+                                ENVIAR MENSAJE
+                            </button>
+                        </form>
+                        
+                        <div>
+                            <p style="margin-bottom: 2rem; opacity: 0.6; line-height: 1.6;">Si buscas un desarrollador con enfoque en datos para tu próximo gran proyecto, hablemos. Respondo en menos de 24 horas.</p>
+                            <a href="https://www.linkedin.com/in/mitchel-poblete/" target="_blank" class="social-link">LINKEDIN</a>
+                            <a href="https://github.com/MiitchPs" target="_blank" class="social-link">GITHUB</a>
+                            <a href="mailto:mitchel.poblete@outlook.com" class="social-link">EMAIL</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="my-projects" data-label="PROYECTOS" class="thanks-section" data-physics="rain" data-morph="30% 70% 30% 70% / 70% 30% 70% 30%">
+                <div style="width: 100%; height: 100%; display: flex; flex-direction: column;">
+                    <div class="projects-header-wrapper">
+                        <div class="projects-title-section">
+                            <h1 class="title-giant">MIS<br>PROYECTOS</h1>
+                            <div class="projects-subtitle">
+                                EXPLORA MIS PROYECTOS ORGANIZADOS POR CATEGORÍA
+                            </div>
+                        </div>
+                        
+                        <div class="projects-tabs-section">
+                            <div class="projects-tabs">
+                                <button class="tab-btn active" data-category="all" onclick="filterProjects('all')">
+                                    TODOS <span class="projects-count" id="count-all">6</span>
+                                </button>
+                                <button class="tab-btn" data-category="web" onclick="filterProjects('web')">
+                                    WEB APPS <span class="projects-count" id="count-web">3</span>
+                                </button>
+                                <button class="tab-btn" data-category="github" onclick="filterProjects('github')">
+                                    GITHUB <span class="projects-count" id="count-github">5</span>
+                                </button>
+                                <button class="tab-btn" data-category="data" onclick="filterProjects('data')">
+                                    DATA SCIENCE <span class="projects-count" id="count-data">2</span>
+                                </button>
+                            </div>
+                            <div style="font-size: 0.75rem; opacity: 0.5; margin-top: 5px;">
+                                Selecciona una categoría para filtrar proyectos
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="projects-showcase-container">
+                        <div class="projects-showcase">
+                            <!-- Proyecto 1 - DATA SCIENCE -->
+                            <div class="project-card-ui" data-categories="data github">
+                                <span class="date">DIC 2025 - ENE 2026</span>
+                                <span class="project-category">Data Science</span>
+                                <h3>BEEsionary</h3>
+                                <p>Proyecto de DataScience y BackEnd sobre análisis de sentimientos desarrollada en No Country con NLP y machine learning.</p>
+                                <ul class="aptitudes-list">
+                                    <li>NLP</li><li>Python</li><li>pandas</li><li>Plotly</li><li>Machine Learning</li><li>Streamlit</li><li>seaborn</li><li>matplotlib</li><li>scikit-learn</li><li>sklearn</li><li>textblob</li><li>request</li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/Hackathon-Alura-ONE-SentimentalAPI-E47" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 2 - WEB APP -->
+                            <div class="project-card-ui" data-categories="web">
+                                <span class="date">2024</span>
+                                <span class="project-category">Web App</span>
+                                <h3>REDES DEPORTIVAS ALFA OMEGA</h3>
+                                <p>Landing Page Venta Redes deportivas con PHP y Bootstrap.</p>
+                                <ul class="aptitudes-list">
+                                    <li>PHP</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>reCAPTCHA</li><li>Bootstrap</li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://redesdeportivasalfaomega.cl/" 
+                                       target="_blank" 
+                                       class="action-btn">SITIO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 3 - WEB APP -->
+                            <div class="project-card-ui" data-categories="web github">
+                                <span class="date">2024</span>
+                                <span class="project-category">Web App</span>
+                                <h3>App CRM</h3>
+                                <p>Gestor de relaciones con clientes usando Tailwind CSS y Bootstrap.</p>
+                                <ul class="aptitudes-list">
+                                    <li>Tailwind CSS</li><li>JavaScript</li><li>Bootstrap</li><li>IndexedDB</li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/JavaScript-CRM-indexedDB" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                    <a href="https://miitchps.github.io/JavaScript-CRM-indexedDB/index.html" 
+                                       target="_blank" 
+                                       class="action-btn">DEMO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 4 - GITHUB -->
+                            <div class="project-card-ui" data-categories="github web">
+                                <span class="date">2024</span>
+                                <span class="project-category">GitHub</span>
+                                <h3>Cotizador Criptomonedas</h3>
+                                <p>Cotizador en tiempo real usando Fetch API y múltiples monedas.</p>
+                                <ul class="aptitudes-list">
+                                    <li>Fetch API</li><li>JavaScript</li><li>CSS</li><li>API REST</li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/JavaScript-fetch-api-criptomoneda-cotizador" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                    <a href="https://miitchps.github.io/JavaScript-fetch-api-criptomoneda-cotizador/" 
+                                       target="_blank" 
+                                       class="action-btn">DEMO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 5 - GITHUB -->
+                            <div class="project-card-ui" data-categories="data github">
+                                <span class="date">2025</span>
+                                <span class="project-category">GitHub</span>
+                                <h3>Telecom X Evasion de clientes Part.1</h3>
+                                <p>AluraLATAM: Análisis y extracción de datos para Telecom X Utilizando Python y Google Colab. Análisis de Evasión de Clientes.</p>
+                                <ul class="aptitudes-list">
+                                    <li>Python</li><li>pandas</li><li>Plotly</li><li>Machine Learning</li><li>Streamlit</li><li>seaborn</li><li>matplotlib</li><li>scikit-learn</li><li>sklearn</li><li>textblob</li><li></li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/Challenge_Alura_LATAM_DataScience_Analisis_de_Evasion_de_Clientes_TelecomX" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 6 - DATA SCIENCE -->
+                            <div class="project-card-ui" data-categories="data github">
+                                <span class="date">2025</span>
+                                <span class="project-category">Data Science</span>
+                                <h3>Telecom X Evasion de clientes Part.2</h3>
+                                <p>Este proyecto utiliza técnicas de análisis de datos y modelos de machine learning (Regresión Logística y Random Forest) para identificar los factores clave que influyen en la cancelación de clientes en una empresa de telecomunicaciones. Incluye visualizaciones, interpretaciones y propuestas de estrategias de retención basadas en los resultados.</p>
+                                <ul class="aptitudes-list">
+                                    <li>Python</li><li>pandas</li><li>Plotly</li><li>Machine Learning</li><li>Streamlit</li><li>seaborn</li><li>matplotlib</li><li>scikit-learn</li><li>sklearn</li><li>textblob</li><li></li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/Challenge_Alura_LATAM_DataScience_Evasion_de_Clientes_TelecomX_Parte_2_Prediccion_de_cancelacion" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                </div>
+                            </div>
+
+                            <!-- Proyecto 7 - WEB APP -->
+                    
+
+                            <!-- Proyecto 8 - GITHUB -->
+                            <div class="project-card-ui" data-categories="github">
+                                <span class="date">2022</span>
+                                <span class="project-category">GitHub</span>
+                                <h3>PROYECTOS EN JavaScript</h3>
+                                <p>19 Proyectos realizados con JavaScript,</p>
+                                <ul class="aptitudes-list">
+                                    <li>JavaSript</li><li>HTML</li><li>CSS</li><li>Async-await</li><li>LocalStorage</li><li>IndexedDB</li><li>API REST</li><li>Fetch API</li>
+                                </ul>
+                                
+                                <div class="project-actions">
+                                    <a href="https://github.com/MiitchPs/Proyectos-JavaScript" 
+                                       target="_blank" 
+                                       class="action-btn">CÓDIGO</a>
+                                    <a href="https://api-demo.vercel.app/docs" 
+                                       target="_blank" 
+                                       class="action-btn">DOCS</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // OPCIÓN B: Si es User ID (más probable)
+        emailjs.init({
+            publicKey: "DB8_PsLeWsx4jVrkk",
+        });
+    </script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</body>
